@@ -1,0 +1,6 @@
+batch_size: 256
+optimizer: sgd
+lr: 0.3
+lr_schedule: cosine
+lr_min_factor: 0.
+weight_decay: 0.000001

@@ -1,0 +1,68 @@
+wandb_mode: online
+project_name: excb
+group: pretraining
+run_name: exp
+checkpoint_path: None
+checkpoint_same_run: True
+seed: 0
+
+mixed_precision: True
+epochs: 100
+prints_per_epoch: 25 
+batch_size: 1024
+num_workers: 8
+
+dataset: imagenet
+dataset_path: ./datasets/ImageNet
+dataset_version: default
+num_classes: 1000
+
+num_clusters: 65536
+init_centroids: True
+clustering_samples: 500000
+
+optimizer: sgd
+lr: 0.6
+lr_min_factor: 0.0001
+sgd_momentum: 0.9
+warmup_epochs: 10
+lr_schedule: cosine
+clip_grad: 0.
+weight_decay: 0.0001
+weight_decay_target_factor: 1.
+centroid_adjustments: wdx10c1
+
+backbone: resnet50
+predictor: True
+mlp_hidden_dim: 2048
+mlp_hidden_layers: 2
+mlp_bn: True
+mlp_activation: relu
+bottleneck_dim: 256
+ema_momentum: 0.996
+ema_end_value: 1.
+patch_size: 16
+drop_path_rate: 0.1
+predictor_activation: bn
+
+teacher_temp: 0.04
+student_temp: 0.1
+
+center_momentum: 0.999
+
+crop_size: 224
+crop_resize: 256
+crop_min_scale: 0.26
+crop_min_scale_final: 0.14
+teacher_transform_views: 2
+p_flip: 0.5
+p_colorjitter: 0.8
+s_colorjitter: 0.5
+p_gray: 0.2
+p_blur: [1., 0.1] # The number of blur and solarize elements determine the number of strong augmentations
+p_solarize: [0., 0.2]
+local_crop_grads: False
+
+mini_crops: 0
+mini_crop_min_scale: 0.05
+mini_crop_size: 96

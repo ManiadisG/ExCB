@@ -1,0 +1,16 @@
+pipreqs
+pillow
+wandb
+einops
+imageio
+scikit-image
+opencv-contrib-python
+h5py
+scikit-learn
+pycocotools
+timm
+termcolor
+jupyterlab
+PyYAML
+tabulate
+scipy

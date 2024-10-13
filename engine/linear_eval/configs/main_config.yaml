@@ -1,0 +1,31 @@
+wandb_mode: online
+update_run: True
+mixed_precision: True
+project_name: cluster_ssl
+group: linear_eval
+run_name: exp
+checkpoint_path: None
+seed: 0
+
+path_to_model: None
+model_version: teacher
+dataset: imagenet
+dataset_path: ./datasets/ImageNet
+dataset_version: default
+num_classes: 1000
+
+batch_size: 256
+crop_size: 224
+crop_resize: 256
+
+epochs: 100
+optimizer: sgd
+lr: 30.
+warmup_epochs: 0
+sgd_momentum: 0.9
+weight_decay: 0.
+lr_schedule: step
+lr_steps: [60, 80]
+lr_gamma: 0.1
+lr_interval: 0.005
+lr_exploration: 0
