@@ -63,6 +63,6 @@ p_blur: [1., 0.1] # The number of blur and solarize elements determine the numbe
 p_solarize: [0., 0.2]
 local_crop_grads: False
 
-mini_crops: 0
+mini_crops: 6
 mini_crop_min_scale: 0.05
 mini_crop_size: 96
